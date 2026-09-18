@@ -4,19 +4,19 @@ export const validarVelocidad = (req, res, next) => {
 
     if (tiempo === undefined || distancia === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
 
     if (typeof tiempo !== "number" || typeof distancia !== "number") {
         return  res.status(400).json({
-            "mensaje": "El tiempo y la distancia deben ser numeros"
+            error: "El tiempo y la distancia deben ser numeros"
         });
     };
 
     if (tiempo <= 0) {
         return res.status(400).json({
-            "mensaje": "El valor de tiempo debe ser mayor a cero"
+            error: "El valor de tiempo debe ser mayor a cero"
         });
     };
     
@@ -29,19 +29,19 @@ export const validarDistancia = (req, res, next) => {
 
     if (velocidad === undefined || tiempo === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
 
     if (typeof velocidad !== "number" || typeof tiempo !== "number") {
         return res.status(400).json({
-            "mensaje": "La velocidad y el tiempo deben ser numeros"
+            error: "La velocidad y el tiempo deben ser numeros"
         });
     };
 
     if (tiempo < 0 || velocidad < 0) {
         return res.status(400).json({
-            "mensaje": "Tiempo y velocidad deben ser numeros positivos"
+            error: "Tiempo y velocidad deben ser numeros positivos"
         });
     };
 
@@ -54,19 +54,19 @@ export const validarTiempo = (req, res, next) => {
 
     if (velocidad === undefined || distancia === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
 
     if (typeof velocidad !== "number" || typeof distancia !== "number") {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser numericos"
+            error: "Los valores deben ser numericos"
         });
     };
 
     if (velocidad <= 0) {
         return res.status(400).json({
-            "mensaje": "El valor de velocidad debe ser mayor a 0"
+            error: "El valor de velocidad debe ser mayor a 0"
         });
     };
 
@@ -79,19 +79,19 @@ export const validarFuerza = (req, res, next) => {
 
     if (masa === undefined || aceleracion === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
 
     if (typeof masa !== "number" || typeof aceleracion !== "number") {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser numericos"
+            error: "Los valores deben ser numericos"
         });
     };
 
     if (masa < 0 || aceleracion < 0) {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser positivos"
+            error: "Los valores deben ser positivos"
         });
     };
 
@@ -104,19 +104,19 @@ export const validarPeso = (req, res, next) => {
 
     if (masa === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
 
     if (typeof masa !== "number") {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser numericos"
+            error: "Los valores deben ser numericos"
         });
     };
 
     if (masa < 0) {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser positivos"
+            error: "Los valores deben ser positivos"
         });
     };
     
@@ -129,19 +129,19 @@ export const validarEnergiaCinetica = (req, res, next) => {
     
     if (masa === undefined || velocidad === undefined) {
         return res.status(400).json({
-            "mensaje": "Datos incompletos"
+            error: "Datos incompletos"
         });
     };
     
     if (typeof masa !== "number" || typeof velocidad !== "number") {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser numericos"
+            error: "Los valores deben ser numericos"
         });
     };
 
     if (masa < 0 || velocidad < 0) {
         return res.status(400).json({
-            "mensaje": "Los valores deben ser positivos"
+            error: "Los valores deben ser positivos"
         });
     };
 

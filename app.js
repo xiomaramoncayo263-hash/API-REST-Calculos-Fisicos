@@ -1,10 +1,12 @@
 import express from "express"; // se importa express desde la libreria 
 import fisicaRoutes from "./routes/fisica.routes.js"; 
+import cors from "cors";
 
 const app = express (); // se asigna la función express a la constante app
 const port = 3000; // se define el puerto por donde se ejecutará la aplicación 
 
 app.use(express.json()); // se inidca que se usará el formato json en express
+app.use(cors());
 
 app.use("/fisica", fisicaRoutes);
 
